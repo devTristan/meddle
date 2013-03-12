@@ -15,8 +15,8 @@ var emotes = meddle('emotes', function(data, next){
 	next();
 }).before('send');
 
-send({text: 'Hi! :)'});
+send({text: 'Hi! :)'}); //SEND: Hi! :)
 
 sender.use(emotes);
 
-send({text: 'Hi! :)'});
+send({text: 'Hi! :)'}); //SEND: Hi! <img src="smiley.gif"/>
