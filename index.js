@@ -160,7 +160,7 @@ var meddle = function(middlewareName, middlewareCallback){
 		if (typeof name == 'function') {
 			var newArgs = args.slice(0);
 			newArgs.push(function(){
-				callback();
+				callback.apply(pub, newArgs);
 			});
 			name.run.apply(pub, newArgs);
 			return;
@@ -193,7 +193,7 @@ var meddle = function(middlewareName, middlewareCallback){
 				newArgs.push.apply(newArgs, args);
 				newArgs.push(function(){
 					dependencyCache.set(name, true);
-					callback();
+					callback.apply(pub, newArgs);
 				});
 				ware[name].run.apply(pub, newArgs);
 			});
