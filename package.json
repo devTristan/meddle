@@ -1,0 +1,11 @@
+{
+  "author": "Tristan Davies <npm@tristan.io> (http://tristan.io)",
+  "name": "meddle",
+  "description": "Middleware dependency management",
+  "version": "0.0.2",
+  "dependencies": {
+    "async": "*"
+  },
+  "main": "./index",
+  "keywords": ["middleware", "dependency"]
+}
